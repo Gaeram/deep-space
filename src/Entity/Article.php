@@ -26,6 +26,9 @@ class Article
     #[ORM\Column(type: Types::TEXT)]
     private ?string $content = null;
 
+    #[ORM\Column(length: 255)]
+    private ?string $image = null;
+
     #[ORM\Column]
     private ?bool $is_published = null;
 
@@ -83,6 +86,17 @@ class Article
     {
         $this->content = $content;
 
+        return $this;
+    }
+
+    public function getImage(): ?string
+    {
+        return $this->image;
+    }
+
+    public function setImage(string $image):self
+    {
+        $this->image = $image;
         return $this;
     }
 
