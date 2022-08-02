@@ -1,3 +1,15 @@
+@font-face {
+  font-family: "Roboto Regular";
+  src: url("/../deep_space/public/assets/fonts/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: "Roboto Bold";
+  src: url("/../deep_space/public/assets/fonts/Roboto-Bold.ttf");
+}
+@font-face {
+  font-family: "Roboto Thin";
+  src: url("/../deep_space/public/assets/fonts/Roboto-Thin.ttf");
+}
 * {
   margin: 0;
   padding: 0;
@@ -5,6 +17,85 @@
 
 body {
   background-color: #AAA3A3;
+}
+
+h1 {
+  font-size: 6rem;
+  color: #E5DFDF;
+  text-align: center;
+  font-family: "Roboto Bold";
+}
+
+h2 {
+  font-family: "Roboto Bold";
+}
+
+h3 {
+  font-family: "Roboto Bold";
+  color: #E5DFDF;
+}
+
+.article-title {
+  text-align: center;
+  margin-top: 5vh;
+}
+
+.article-sub {
+  color: #000000;
+  margin-top: 3vh;
+}
+
+.article-text {
+  font-family: "Roboto Thin";
+  margin-top: 3vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn {
+  display: inline-block;
+  margin: auto;
+  background-color: #706767;
+  color: white;
+  text-align: center;
+}
+
+.button-prehead {
+  text-decoration: none;
+  margin-top: 5vh;
+  padding: 20px;
+  font-family: "Roboto Regular";
+  background-color: #706767;
+  color: #C2C2C2;
+  border: #878383 solid 1px;
+  border-radius: 8px;
+}
+
+.button-prehead:hover {
+  background-color: #C2C2C2;
+  color: #706767;
+}
+
+.chevron:hover {
+  margin-left: 10px;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 5vh;
+  text-decoration: none;
+  text-align: center;
+  padding: 10px;
+  font-family: "Roboto Regular";
+  background-color: #706767;
+  color: #C2C2C2;
+  border: #878383 solid 1px;
+  border-radius: 8px;
+}
+
+.button:hover {
+  background-color: #C2C2C2;
+  color: #706767;
 }
 
 header {
@@ -15,6 +106,196 @@ header {
 .header-logo {
   height: 75px;
   width: 150px;
+}
+
+.nav-toggler {
+  position: fixed;
+  z-index: 10;
+  top: 30px;
+  right: 30px;
+  height: 50px;
+  width: 50px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+}
+
+.line {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #f1f1f1;
+  transition: transform 0.3s ease-out, opacity 0.1s ease-out;
+}
+
+.l1 {
+  transform: translateY(-10px);
+}
+
+.l3 {
+  transform: translateY(10px);
+}
+
+.nav-toggler.active .l1 {
+  transform: translateY(0px) rotate(135deg);
+}
+
+.nav-toggler.active .l2 {
+  opacity: 0;
+}
+
+.nav-toggler.active .l3 {
+  transform: translateY(0px) rotate(-135deg);
+}
+
+nav {
+  position: fixed;
+  width: 50vw;
+  min-height: 100vh;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #111;
+  border-left: 1px solid #cfcfcf;
+  transform: translateX(100%);
+  transition: transform 0.3s cubic-bezier(0.73, 0.11, 0.67, 0.84);
+}
+
+nav.active {
+  transform: translate(0);
+}
+
+nav a {
+  font-family: Quicksand, sans-serif;
+  color: #f1f1f1;
+  font-size: 20px;
+  display: block;
+  margin: 10px 0;
+  text-decoration: none;
+}
+
+.list {
+  height: 30%;
+  text-align: center;
+  background-color: #D3D3D3;
+  border-radius: 15px;
+  margin: auto;
+}
+
+.articles {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.form-group {
+  width: 60vw;
+  margin: auto;
+}
+
+.mono {
+  margin: auto;
+  margin-top: 5vh;
+  border-radius: 15px;
+  text-align: center;
+  width: 80%;
+  background-color: #D3D3D3;
+}
+
+.article-img {
+  margin-top: 5vh;
+  border-radius: 15px;
+}
+
+.list-img {
+  height: 17vh;
+  margin-top: 5vh;
+}
+
+.pre-header {
+  width: 100vw;
+  height: 90vh;
+  background-image: url("/../deep_space/public/assets/img/nebula.png");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.presentation-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.presentation-box h2 {
+  margin-top: 5vh;
+}
+
+.boxes {
+  margin-top: 3vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+}
+
+boxes {
+  color: #E5DFDF;
+}
+
+.box {
+  background-image: url("/../deep_space/public/assets/img/launch.jpeg");
+  background-position: center;
+  background-size: cover;
+  width: 35vw;
+  height: 45vh;
+  border: #000000 solid 1px;
+  border-radius: 15px;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0.5vh;
+}
+
+.semi-boxes {
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  margin-left: 0.5vh;
+}
+
+.second-box {
+  background-image: url("/../deep_space/public/assets/img/andromeda.jpeg");
+  background-position: center;
+  background-size: cover;
+  width: 35vw;
+  height: 22vh;
+  border: #000000 solid 1px;
+  border-radius: 15px;
+  margin-bottom: 1vh;
+}
+
+.third-box {
+  background-image: url("/../deep_space/public/assets/img/telescope.png");
+  background-position: center;
+  background-size: cover;
+  width: 35vw;
+  height: 22vh;
+  border: #000000 solid 1px;
+  border-radius: 15px;
+  margin-top: 1vh;
 }
 
 /*# sourceMappingURL=style.css.map */

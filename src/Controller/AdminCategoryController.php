@@ -34,10 +34,10 @@ class AdminCategoryController extends AbstractController
     #[Route("/admin/categories", name: "admin-categories")]
     public function showCategories(CategoryRepository $categoryRepository){
 
-        $category = $categoryRepository->findAll();
+        $categories = $categoryRepository->findAll();
 
         return $this->render("admin/categories.html.twig", [
-            'category'=>$category
+            'categories'=>$categories
         ]);
     }
 

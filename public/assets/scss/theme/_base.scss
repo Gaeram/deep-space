@@ -6,3 +6,36 @@
 body {
   background-color: $primary-color;
 }
+
+h1 {
+  font-size: 6rem;
+  color: $sixth-color;
+  text-align: center;
+  font-family: "Roboto Bold";
+}
+
+h2 {
+  font-family: "Roboto Bold";
+}
+
+h3 {
+  font-family: "Roboto Bold";
+  color: $sixth-color;
+}
+
+.article-title {
+  text-align: center;
+  margin-top: 5vh;
+}
+
+.article-sub {
+  color: $secondary-color;
+  margin-top: 3vh;
+}
+
+.article-text {
+  font-family: "Roboto Thin";
+  margin-top: 3vh;
+  margin-left: auto;
+  margin-right: auto;
+}

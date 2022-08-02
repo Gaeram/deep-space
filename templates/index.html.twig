@@ -1,1 +1,32 @@
 {% extends 'base.html.twig' %}
+
+{% block title %}
+    <title>Page d'accueil</title>
+{% endblock %}
+
+{% block main %}
+
+{% include ('preheader.html.twig') %}
+
+    <section class="presentation-box">
+        <h2>EXPLORER</h2>
+        <div class="boxes">
+            <div class="box">
+                <h3>LE PROJET DEEP SPACE DS-1</h3>
+                <a class="button" href="{{ path('project-page') }}">En savoir +</a>
+            </div>
+            <div class="semi-boxes">
+                <div class="second-box">
+                    <h3>TOUTES NOS PUBLICATIONS</h3>
+                    <a class="button" href="{{ path('admin-articles') }}">En savoir +</a>
+                </div>
+
+                <div class="third-box">
+                    <h3>TELESCOPE GJR-KING</h3>
+                    <a class="button" href="{{ path('telescop-page') }}">En savoir +</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

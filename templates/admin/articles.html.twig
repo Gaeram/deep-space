@@ -1,1 +1,27 @@
 {% extends 'admin/base.html.twig' %}
+
+{% block title %}
+    <title>Tout les articles</title>
+{% endblock %}
+
+{% block main %}
+    <a href="{{ path('admin-create-article') }}" class="btn">Créér un article</a>
+    {% for article in articles %}
+        {% if article.IsPublished %}
+            <section class="articles">
+                <article class="list">
+                    <img class="list-img" src="{{asset('uploads/images/'~ article.image)}}" alt="{{ article.title }}">
+                    <h2>{{ article.title }}</h2>
+                    <p>{{ article.category.title }}</p>
+                    <p>{{ article.description }}</p>
+
+                    <a href="{{ path('admin-article', {'id': article.id}) }}">Lire</a>
+                    <a href="{{ path('admin-article-update', {'id': article.id}) }}">Modifier</a>
+                    <a href="{{ path('admin-article-delete', {'id': article.id}) }}">Supprimer</a>
+                </article>
+        {% else %}
+                <p>Cet article n'est pas encore publié</p>
+            </section>
+        {% endif %}
+    {% endfor %}
+{% endblock %}

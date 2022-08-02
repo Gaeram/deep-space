@@ -40,6 +40,7 @@ class AdminArticleController extends AbstractController
             $article->setImage($newFilename);
 
             $entityManager->persist($article);
+            $entityManager->flush();
         }
 
         return $this->render("admin/form-article.html.twig", [
@@ -49,13 +50,13 @@ class AdminArticleController extends AbstractController
 
     }
 
-    #[Route("/admin/articles", name: "admin-articles")]
+    #[Route("admin/articles", name: "admin-articles")]
     public function showArticles(ArticleRepository $articleRepository){
 
-        $article = $articleRepository->findAll();
+        $articles = $articleRepository->findAll();
 
         return $this->render('admin/articles.html.twig', [
-            "article"=>$article
+            'articles'=>$articles
         ]);
     }
 
@@ -65,7 +66,7 @@ class AdminArticleController extends AbstractController
         $article = $articleRepository->find($id);
 
         return $this->render('admin/article.html.twig' ,[
-            "article"=>$article
+            'article'=>$article
         ]);
     }
 
@@ -96,6 +97,8 @@ class AdminArticleController extends AbstractController
             $article->setImage($newFilename);
 
             $entityManager->persist($article);
+            $entityManager->flush();
+
         }
 
         return $this->render("admin/form-article.html.twig", [

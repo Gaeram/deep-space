@@ -1,0 +1,119 @@
+.list {
+  height: 30%;
+  text-align: center;
+  background-color: $ninth-color ;
+  border-radius: 15px;
+  margin: auto;
+}
+
+.articles {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.form-group {
+  width: 60vw;
+  margin: auto;
+}
+
+.mono {
+  margin: auto;
+  margin-top: 5vh;
+  border-radius: 15px;
+  text-align: center;
+  width: 80%;
+  background-color: $ninth-color;
+}
+
+.article-img {
+  margin-top: 5vh;
+  border-radius: 15px;
+}
+
+.list-img {
+  height: 17vh;
+  margin-top: 5vh;
+}
+
+.pre-header {
+  width: 100vw;
+  height: 90vh;
+  background-image: url("/../deep_space/public/assets/img/nebula.png");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+.presentation-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.presentation-box h2 {
+  margin-top: 5vh;
+}
+
+.boxes {
+  margin-top: 3vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+}
+
+boxes {
+  color: $sixth-color;
+}
+
+.box {
+  background-image: url("/../deep_space/public/assets/img/launch.jpeg");
+  background-position: center;
+  background-size: cover;
+  width: 35vw;
+  height: 45vh;
+  border: $secondary-color solid 1px;
+  border-radius: 15px;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0.5vh;
+}
+
+.semi-boxes {
+
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  margin-left: 0.5vh;
+
+}
+.second-box {
+  background-image: url("/../deep_space/public/assets/img/andromeda.jpeg");
+  background-position: center;
+  background-size: cover;
+  width: 35vw;
+  height: 22vh;
+  border: $secondary-color solid 1px;
+  border-radius: 15px;
+  margin-bottom: 1vh;
+
+}
+
+.third-box {
+  background-image: url("/../deep_space/public/assets/img/telescope.png");
+  background-position: center;
+  background-size: cover;
+  width: 35vw;
+  height: 22vh;
+  border: $secondary-color solid 1px;
+  border-radius: 15px;
+  margin-top: 1vh;
+}
+

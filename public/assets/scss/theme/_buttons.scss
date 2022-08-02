@@ -1,0 +1,46 @@
+.btn {
+  display: inline-block;
+  margin: auto;
+  background-color: $fourth-color ;
+  color: white;
+  text-align: center;
+}
+
+.button-prehead {
+  text-decoration: none;
+  margin-top: 5vh;
+  padding: 20px;
+  font-family: "Roboto Regular";
+  background-color: $fourth-color;
+  color: $third-color;
+  border: $fifth-color solid 1px;
+  border-radius: 8px;
+}
+
+.button-prehead:hover {
+  background-color: $third-color;
+  color: $fourth-color;
+}
+
+.chevron:hover {
+  margin-left: 10px;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 5vh;
+  text-decoration: none;
+  text-align: center;
+  padding: 10px;
+  font-family: "Roboto Regular";
+  background-color: $fourth-color;
+  color: $third-color;
+  border: $fifth-color solid 1px;
+  border-radius: 8px;
+
+}
+
+.button:hover {
+  background-color: $third-color;
+  color: $fourth-color;
+}
