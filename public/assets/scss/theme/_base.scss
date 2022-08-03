@@ -5,6 +5,7 @@
 
 body {
   background-color: $primary-color;
+
 }
 
 h1 {
@@ -38,4 +39,10 @@ h3 {
   margin-top: 3vh;
   margin-left: auto;
   margin-right: auto;
+}
+
+.section-title {
+  font-family: "Roboto Bold";
+  margin-top: 5vh;
+  text-align: center;
 }

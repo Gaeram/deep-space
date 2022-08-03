@@ -1,18 +1,13 @@
 .list {
-  height: 30%;
+  width: 30vw;
+  height: 50vh;
   text-align: center;
   background-color: $ninth-color ;
   border-radius: 15px;
   margin: auto;
+  margin-top: 3vh;
 }
 
-.articles {
-  display: flex;
-  flex-direction: row;
-  margin: auto;
-  justify-content: space-evenly;
-  align-items: center;
-}
 
 .form-group {
   width: 60vw;
@@ -29,6 +24,7 @@
 }
 
 .article-img {
+  height: 40vh;
   margin-top: 5vh;
   border-radius: 15px;
 }
@@ -36,6 +32,15 @@
 .list-img {
   height: 17vh;
   margin-top: 5vh;
+}
+
+.articles {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
 }
 
 .pre-header {
@@ -116,4 +121,17 @@ boxes {
   border-radius: 15px;
   margin-top: 1vh;
 }
+
+.articles-box {
+  margin-top: 5vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
 

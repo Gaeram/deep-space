@@ -26,7 +26,20 @@
   margin-left: 10px;
 }
 
-.button {
+.button-box{
+  display: inline-block;
+  margin-top: 17vh;
+  text-decoration: none;
+  text-align: center;
+  padding: 10px;
+  font-family: "Roboto Regular";
+  background-color: $fourth-color;
+  color: $third-color;
+  border: $fifth-color solid 1px;
+  border-radius: 8px;
+}
+
+.button-boxes {
   display: inline-block;
   margin-top: 5vh;
   text-decoration: none;
@@ -40,7 +53,11 @@
 
 }
 
-.button:hover {
+.button-box:hover {
+  background-color: $third-color;
+  color: $fourth-color;
+}
+.button-boxes:hover {
   background-color: $third-color;
   color: $fourth-color;
 }

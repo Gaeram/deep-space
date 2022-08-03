@@ -18,8 +18,8 @@
                 <a href="{{ path('home') }}">Accueil</a>
                 <a href="{{ path('admin-articles') }}">Articles</a>
                 <a href="{{ path('admin-categories') }}">Catégories</a>
-                <a href="#">Location</a>
-                <a href="#">Contact</a>
+                <a href="{{ path('telescop-page')}}">Téléscope GJR-KING</a>
+                <a href="{{ path('project-page') }}">Projet DS-1</a>
             </nav>
             <button type="button" aria-label="toggle curtain navigation" class="nav-toggler">
                 <span class="line l1"></span>
@@ -36,7 +36,14 @@
         </main>
         <footer>
             <img class="footer-logo" src="{{ asset('assets/img/2.png') }}">
+            <div class="footer-info">
+                <p>DEEP SPACE</p>
+                <p>300 AVENUE DE LA SOMME</p>
+                <p>MÉRIGNAC FRANCE</p>
+                <p>COPYRIGHT © | RAMILLON GAËTAN </p>
+            </div>
         </footer>
+
         <script src="{{ asset('assets/js/script.js') }}"></script>
     </body>
 </html>

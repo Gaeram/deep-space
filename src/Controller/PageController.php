@@ -2,15 +2,20 @@
 
 namespace App\Controller;
 
+use App\Repository\ArticleRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
 class PageController extends AbstractController
 {
     #[Route("/", name:"home")]
-    public function homePage(){
+    public function homePage(ArticleRepository $articleRepository){
 
-        return $this->render("index.html.twig");
+        $lastArticles = $articleRepository->findBy([], ['id' => 'DESC'], 3);
+
+        return $this->render("index.html.twig", [
+            'lastArticles' => $lastArticles
+        ]);
 
     }
 

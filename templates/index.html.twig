@@ -9,24 +9,36 @@
 {% include ('preheader.html.twig') %}
 
     <section class="presentation-box">
-        <h2>EXPLORER</h2>
+        <h2 class="section-title">EXPLORER</h2>
         <div class="boxes">
             <div class="box">
                 <h3>LE PROJET DEEP SPACE DS-1</h3>
-                <a class="button" href="{{ path('project-page') }}">En savoir +</a>
+                <a class="button-box" href="{{ path('project-page') }}">En savoir +</a>
             </div>
             <div class="semi-boxes">
                 <div class="second-box">
                     <h3>TOUTES NOS PUBLICATIONS</h3>
-                    <a class="button" href="{{ path('admin-articles') }}">En savoir +</a>
+                    <a class="button-boxes" href="{{ path('admin-articles') }}">En savoir +</a>
                 </div>
 
                 <div class="third-box">
                     <h3>TELESCOPE GJR-KING</h3>
-                    <a class="button" href="{{ path('telescop-page') }}">En savoir +</a>
+                    <a class="button-boxes" href="{{ path('telescop-page') }}">En savoir +</a>
                 </div>
             </div>
         </div>
     </section>
+    <h2 class="section-title">NOS DERNIERS ARTICLES</h2>
 
+    <section class="articles-box">
+
+        {% for article in lastArticles %}
+        <article class="list">
+            <img class="list-img" src="{{asset('uploads/images/'~ article.image)}}" alt="{{ article.title }}">
+            <h2>{{ article.title }}</h2>
+            <p>{{ article.category.title }}</p>
+            <p>{{ article.description }}</p>
+        </article>
+        {% endfor %}
+    </section>
 {% endblock %}
