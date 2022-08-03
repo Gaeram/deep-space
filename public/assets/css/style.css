@@ -298,4 +298,18 @@ boxes {
   margin-top: 1vh;
 }
 
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #282928;
+  margin-top: 10vh;
+}
+
+.footer-logo {
+  height: 75px;
+  width: 150px;
+}
+
 /*# sourceMappingURL=style.css.map */

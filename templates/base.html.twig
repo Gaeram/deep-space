@@ -5,12 +5,27 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="{{ asset("assets/css/style.css") }}">
-        <title>Document</title>
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/img/2.png') }}">
+
+        {% block title %}
+            <title>Document</title>
+        {% endblock %}
     </head>
     <body>
         <header>
             <a href="{{ path('home') }}"><img class="header-logo" src="{{ asset("assets/img/1.png") }}"></a>
-
+            <nav>
+                <a href="{{ path('home') }}">Accueil</a>
+                <a href="{{ path('admin-articles') }}">Articles</a>
+                <a href="{{ path('admin-categories') }}">Catégories</a>
+                <a href="#">Location</a>
+                <a href="#">Contact</a>
+            </nav>
+            <button type="button" aria-label="toggle curtain navigation" class="nav-toggler">
+                <span class="line l1"></span>
+                <span class="line l2"></span>
+                <span class="line l3"></span>
+            </button>
         </header>
         <main>
 
@@ -20,8 +35,8 @@
 
         </main>
         <footer>
-
+            <img class="footer-logo" src="{{ asset('assets/img/2.png') }}">
         </footer>
-
+        <script src="{{ asset('assets/js/script.js') }}"></script>
     </body>
 </html>

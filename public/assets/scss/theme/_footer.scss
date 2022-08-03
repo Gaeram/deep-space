@@ -1,0 +1,14 @@
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  background-color: $tenth-color;
+  margin-top: 10vh;
+}
+
+.footer-logo {
+  height: 75px;
+  width: 150px;
+}
