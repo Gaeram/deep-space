@@ -38,6 +38,7 @@
             <h2>{{ article.title }}</h2>
             <p>{{ article.category.title }}</p>
             <p>{{ article.description }}</p>
+            <a class="button-boxes" href="{{ path('admin-article', {'id': article.id}) }}">Lire +</a>
         </article>
         {% endfor %}
     </section>
