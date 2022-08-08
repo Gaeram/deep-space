@@ -18,7 +18,7 @@
             <div class="semi-boxes">
                 <div class="second-box">
                     <h3>TOUTES NOS PUBLICATIONS</h3>
-                    <a class="button-boxes" href="{{ path('admin-articles') }}">En savoir +</a>
+                    <a class="button-boxes" href="{{ path('articles-page') }}">En savoir +</a>
                 </div>
 
                 <div class="third-box">
@@ -38,7 +38,7 @@
             <h2>{{ article.title }}</h2>
             <p>{{ article.category.title }}</p>
             <p>{{ article.description }}</p>
-            <a class="button-boxes" href="{{ path('admin-article', {'id': article.id}) }}">Lire +</a>
+            <a class="button-boxes" href="{{ path('article-page', {'id': article.id}) }}">Lire <span class="chevron">></span></a>
         </article>
         {% endfor %}
     </section>

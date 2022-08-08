@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    <title>Tout les articles</title>
+{% endblock %}
+
+{% block main %}
+
+{% include ('preheader.html.twig') %}
+
+    <section class="articles">
+        {% for article in articles %}
+            {% if article.IsPublished %}
+                <article class="list">
+                    <img class="list-img" src="{{asset('uploads/images/'~ article.image)}}" alt="{{ article.title }}">
+                    <h2>{{ article.title }}</h2>
+                    <p>{{ article.category.title }}</p>
+                    <p>{{ article.description }}</p>
+                    <a class="button-boxes" href="{{ path('article-page', {'id': article.id}) }}">Lire <span class="chevron">></span></a>
+                </article>
+            {% else %}
+                <p>Cet article n'est pas encore publié</p>
+            {% endif %}
+        {% endfor %}
+    </section>
+{% endblock %}
