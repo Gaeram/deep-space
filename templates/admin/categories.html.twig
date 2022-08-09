@@ -3,8 +3,23 @@
 {% block title %}
     <title>Catégories</title>
 {% endblock %}
-
-
 {% block main %}
-
+<a href="{{ path('admin-create-category') }}" class="btn">Créér une category</a>
+<section class="articles">
+    {% for category in categories %}
+        {% if category.IsPublished %}
+            <article class="list">
+                <h2>{{ category.title }}</h2>
+                <p>{{ category.title }}</p>
+                <p>{{ category.description }}</p>
+                <a class="button-boxes" href="{{ path('admin-category-update', {'id': category.id}) }}">Modifier</a>
+                <a class="button-boxes" href="{{ path('admin-category-delete', {'id': category.id}) }}">Supprimer</a>
+            </article>
+        {% else %}
+            <p>Cet article n'est pas encore publié</p>
+        {% endif %}
+    {% endfor %}
+</section>
 {% endblock %}
+
+
