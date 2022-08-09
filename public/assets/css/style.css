@@ -59,11 +59,18 @@ h3 {
 }
 
 .subtitle {
+  margin-top: 3vh;
   font-family: "Roboto Regular";
 }
 
 .description {
+  margin-top: 5vh;
   font-family: "Roboto Thin";
+}
+
+.headline {
+  font-family: "Roboto Bold";
+  color: #000000;
 }
 
 .btn {
@@ -128,12 +135,6 @@ h3 {
 .button-boxes:hover {
   background-color: #C2C2C2;
   color: #706767;
-}
-
-.article-video {
-  height: 60vh;
-  width: 40vw;
-  border-radius: 15px;
 }
 
 header {
@@ -246,6 +247,13 @@ nav a {
 .article-img {
   height: 40vh;
   margin-top: 5vh;
+  border-radius: 15px;
+}
+
+.article-video {
+  margin-top: 5vh;
+  height: 60vh;
+  width: 40vw;
   border-radius: 15px;
 }
 

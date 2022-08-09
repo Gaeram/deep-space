@@ -50,9 +50,16 @@ h3 {
 
 
 .subtitle {
+  margin-top: 3vh;
   font-family: "Roboto Regular";
 }
 
 .description {
+  margin-top: 5vh;
   font-family: "Roboto Thin";
+}
+
+.headline {
+  font-family: "Roboto Bold";
+  color: $secondary-color;
 }

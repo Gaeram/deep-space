@@ -14,9 +14,9 @@
                     <h2>{{ article.title }}</h2>
                     <p>{{ article.category.title }}</p>
                     <p>{{ article.description }}</p>
-                    <a href="{{ path('admin-article', {'id': article.id}) }}">Lire</a>
-                    <a href="{{ path('admin-article-update', {'id': article.id}) }}">Modifier</a>
-                    <a href="{{ path('admin-article-delete', {'id': article.id}) }}">Supprimer</a>
+                    <a class="button-boxes" href="{{ path('admin-article', {'id': article.id}) }}">Lire</a>
+                    <a class="button-boxes" href="{{ path('admin-article-update', {'id': article.id}) }}">Modifier</a>
+                    <a class="button-boxes" href="{{ path('admin-article-delete', {'id': article.id}) }}">Supprimer</a>
                 </article>
         {% else %}
                 <p>Cet article n'est pas encore publié</p>

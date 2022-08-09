@@ -9,7 +9,7 @@
 {% include 'preheader.html.twig' %}
     <article class="mono">
         <img class="article-img" src="{{ asset('uploads/images/'~ article.image)}}" alt="{{ article.title }}">
-        <h1>{{ article.title }}</h1>
+        <h1 class="headline">{{ article.title }}</h1>
         <p class="subtitle">{{ article.category.title }}</p>
         <p class="description">{{ article.content }}</p>
     </article>
