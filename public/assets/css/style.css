@@ -58,6 +58,14 @@ h3 {
   text-align: center;
 }
 
+.subtitle {
+  font-family: "Roboto Regular";
+}
+
+.description {
+  font-family: "Roboto Thin";
+}
+
 .btn {
   display: inline-block;
   margin: auto;
@@ -120,6 +128,12 @@ h3 {
 .button-boxes:hover {
   background-color: #C2C2C2;
   color: #706767;
+}
+
+.article-video {
+  height: 60vh;
+  width: 40vw;
+  border-radius: 15px;
 }
 
 header {
