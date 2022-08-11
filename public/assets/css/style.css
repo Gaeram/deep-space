@@ -378,11 +378,24 @@ boxes {
   .list {
     width: 80vw;
   }
+  .boxes {
+    flex-direction: column;
+  }
+  .semi-boxes {
+    margin-top: 1vh;
+  }
+  .button-box {
+    margin-top: 3vh;
+  }
   .button-boxes {
     margin-top: 3vh;
   }
   .box {
+    background-position: center;
+    background-size: cover;
     width: 80vw;
+    height: 22vh;
+    margin-left: 0.5vh;
   }
   .second-box {
     width: 80vw;
