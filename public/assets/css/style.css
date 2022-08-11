@@ -69,6 +69,8 @@ h3 {
 }
 
 .headline {
+  margin-top: 3vh;
+  font-size: 2rem;
   font-family: "Roboto Bold";
   color: #000000;
 }
@@ -222,7 +224,7 @@ nav a {
 
 .list {
   width: 30vw;
-  height: 50vh;
+  height: 70vh;
   text-align: center;
   background-color: #D3D3D3;
   border-radius: 15px;
@@ -382,6 +384,7 @@ nav a {
   }
   .list {
     width: 80vw;
+    height: 60vh;
   }
   .boxes {
     flex-direction: column;
