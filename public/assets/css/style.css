@@ -116,7 +116,7 @@ h3 {
 
 .button-boxes {
   display: inline-block;
-  margin-top: 5vh;
+  margin-top: 4vh;
   text-decoration: none;
   text-align: center;
   padding: 10px;
@@ -228,6 +228,7 @@ nav a {
   border-radius: 15px;
   margin: auto;
   margin-top: 3vh;
+  box-shadow: 8px 8px 12px #646464;
 }
 
 .form-group {
@@ -242,12 +243,14 @@ nav a {
   text-align: center;
   width: 80%;
   background-color: #D3D3D3;
+  box-shadow: 8px 8px 12px #646464;
 }
 
 .article-img {
   height: 40vh;
   margin-top: 5vh;
   border-radius: 15px;
+  box-shadow: 8px 8px 12px #646464;
 }
 
 .article-video {
@@ -255,11 +258,13 @@ nav a {
   height: 60vh;
   width: 40vw;
   border-radius: 15px;
+  box-shadow: 8px 8px 12px #646464;
 }
 
 .list-img {
   height: 17vh;
   margin-top: 5vh;
+  box-shadow: 8px 8px 12px #646464;
 }
 
 .articles {
@@ -299,9 +304,6 @@ nav a {
   flex-direction: row;
   justify-content: space-around;
   text-align: center;
-}
-
-boxes {
   color: #E5DFDF;
 }
 
@@ -316,6 +318,7 @@ boxes {
   justify-content: center;
   align-items: center;
   margin-right: 0.5vh;
+  box-shadow: 8px 8px 12px #646464;
 }
 
 .semi-boxes {
@@ -334,6 +337,7 @@ boxes {
   border: #000000 solid 1px;
   border-radius: 15px;
   margin-bottom: 1vh;
+  box-shadow: 8px 8px 12px #646464;
 }
 
 .third-box {
@@ -345,6 +349,7 @@ boxes {
   border: #000000 solid 1px;
   border-radius: 15px;
   margin-top: 1vh;
+  box-shadow: 8px 8px 12px #646464;
 }
 
 .articles-box {

@@ -6,6 +6,7 @@
   border-radius: 15px;
   margin: auto;
   margin-top: 3vh;
+  box-shadow: 8px 8px 12px $eight-color
 }
 
 
@@ -21,12 +22,14 @@
   text-align: center;
   width: 80%;
   background-color: $ninth-color;
+  box-shadow: 8px 8px 12px $eight-color;
 }
 
 .article-img {
   height: 40vh;
   margin-top: 5vh;
   border-radius: 15px;
+  box-shadow: 8px 8px 12px $eight-color;
 }
 
 .article-video {
@@ -34,11 +37,13 @@
   height: 60vh;
   width: 40vw;
   border-radius: 15px;
+  box-shadow: 8px 8px 12px $eight-color;
 }
 
 .list-img {
   height: 17vh;
   margin-top: 5vh;
+  box-shadow: 8px 8px 12px $eight-color;
 }
 
 .articles {
@@ -47,7 +52,6 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-
 }
 
 .pre-header {
@@ -79,9 +83,6 @@
   flex-direction: row;
   justify-content: space-around;
   text-align: center;
-}
-
-boxes {
   color: $sixth-color;
 }
 
@@ -96,6 +97,7 @@ boxes {
   justify-content: center;
   align-items: center;
   margin-right: 0.5vh;
+  box-shadow: 8px 8px 12px $eight-color;
 }
 
 .semi-boxes {
@@ -115,6 +117,7 @@ boxes {
   border: $secondary-color solid 1px;
   border-radius: 15px;
   margin-bottom: 1vh;
+  box-shadow: 8px 8px 12px $eight-color;
 
 }
 
@@ -127,6 +130,7 @@ boxes {
   border: $secondary-color solid 1px;
   border-radius: 15px;
   margin-top: 1vh;
+  box-shadow: 8px 8px 12px $eight-color;
 }
 
 .articles-box {
