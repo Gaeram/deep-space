@@ -1,14 +1,14 @@
 @font-face {
   font-family: "Roboto Regular";
-  src: url("/../deep_space/public/assets/fonts/Roboto-Regular.ttf");
+  src: url("/../deep-space/public/assets/fonts/Roboto-Regular.ttf");
 }
 @font-face {
   font-family: "Roboto Bold";
-  src: url("/../deep_space/public/assets/fonts/Roboto-Bold.ttf");
+  src: url("/../deep-space/public/assets/fonts/Roboto-Bold.ttf");
 }
 @font-face {
   font-family: "Roboto Thin";
-  src: url("/../deep_space/public/assets/fonts/Roboto-Thin.ttf");
+  src: url("/../deep-space/public/assets/fonts/Roboto-Thin.ttf");
 }
 * {
   margin: 0;
@@ -280,7 +280,7 @@ nav a {
 .pre-header {
   width: 100vw;
   height: 90vh;
-  background-image: url("/../deep_space/public/assets/img/nebula.png");
+  background-image: url("/../deep-space/public/assets/img/nebula.png");
   background-position: center;
   background-size: cover;
   display: flex;
@@ -310,7 +310,7 @@ nav a {
 }
 
 .box {
-  background-image: url("/../deep_space/public/assets/img/launch.jpeg");
+  background-image: url("/../deep-space/public/assets/img/launch.jpeg");
   background-position: center;
   background-size: cover;
   width: 35vw;
@@ -331,7 +331,7 @@ nav a {
 }
 
 .second-box {
-  background-image: url("/../deep_space/public/assets/img/andromeda.jpeg");
+  background-image: url("/../deep-space/public/assets/img/andromeda.jpeg");
   background-position: center;
   background-size: cover;
   width: 35vw;
@@ -343,7 +343,7 @@ nav a {
 }
 
 .third-box {
-  background-image: url("/../deep_space/public/assets/img/telescope.png");
+  background-image: url("/../deep-space/public/assets/img/telescope.png");
   background-position: center;
   background-size: cover;
   width: 35vw;
@@ -384,7 +384,6 @@ nav a {
   }
   .list {
     width: 80vw;
-    height: 60vh;
   }
   .boxes {
     flex-direction: column;
