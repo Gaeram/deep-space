@@ -39,6 +39,32 @@ class ArticleRepository extends ServiceEntityRepository
         }
     }
 
+    public function searchByWord($search)
+    {
+        // recuperation du query builder
+        // c'est unn objet qui crée
+        // des requetes SQL en PHP
+        $qb = $this->createQueryBuilder('article');
+
+        // Je l'utilise pour faire un select sur la table articles
+        $query = $qb->select('article.title')
+            // je récupère les article.html.twig dont le titre correspond
+            // à :search
+            ->where('article.title LIKE :search')
+            // ici je définie la valeur de search
+            // En lui diant que le mot
+            // Peut contenir des caracteres avant et apres
+            // Il sera quand meme trouvé
+            // Je le fais en 2 etapes avec SetParameter
+            // Qui permet à Doctrine de sécuriser ma
+            // variable $search
+            ->setParameter('search', '%'.$search.'%')
+            // je récupère la requete générée
+            ->getQuery();
+        // Que j'exécute en BDD et y récupère les résultats
+        return $query->getResult();
+    }
+
 //    /**
 //     * @return Article[] Returns an array of Article objects
 //     */

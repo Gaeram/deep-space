@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Repository\ArticleRepository;
 use App\Service\CallApiService;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
 class PageController extends AbstractController
@@ -63,6 +64,26 @@ class PageController extends AbstractController
             "article" => $article
         ]);
     }
+
+    #[Route("/articles/search", name: "articles-search")]
+    public function searchArticle(Request $request, ArticleRepository $articleRepository)
+    {
+        // Je récupère les valeurs de mon formulaire dans ma route
+        $search = $request->query->get('search');
+
+        // je vais créer une méthode dans mon Repository
+        // Qui permet de retrouver du contenu enn fonction d'un mot
+        // entré dans la barre de recherche
+        $articles = $articleRepository->searchByWord($search);
+
+
+        // Je renvoie un .twig en lui passant les articles trouvé
+        // & les affiche
+        return $this->render('search_articles.html.twig', [
+            'articles' => $articles
+        ]);
+    }
+
 
 
 }

@@ -410,6 +410,10 @@ nav a {
   .third-box {
     width: 80vw;
   }
+  .toolbar {
+    background-color: #000000;
+    width: 100vw;
+  }
 }
 footer {
   width: 100vw;

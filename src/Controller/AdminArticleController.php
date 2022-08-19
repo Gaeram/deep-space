@@ -125,4 +125,6 @@ class AdminArticleController extends AbstractController
 
         return $this->redirectToRoute('admin-articles');
     }
+
+
 }
