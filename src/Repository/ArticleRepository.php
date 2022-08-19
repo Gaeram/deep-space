@@ -47,7 +47,7 @@ class ArticleRepository extends ServiceEntityRepository
         $qb = $this->createQueryBuilder('article');
 
         // Je l'utilise pour faire un select sur la table articles
-        $query = $qb->select('article.title')
+        $query = $qb->select('article')
             // je récupère les article.html.twig dont le titre correspond
             // à :search
             ->where('article.title LIKE :search')
