@@ -24,6 +24,14 @@ h3 {
   color: $sixth-color;
 }
 
+.toolbar {
+  background-color: $secondary-color;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
 .article-title {
   text-align: center;
   margin-top: 5vh;

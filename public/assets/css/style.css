@@ -35,6 +35,14 @@ h3 {
   color: #E5DFDF;
 }
 
+.toolbar {
+  background-color: #000000;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
 .article-title {
   text-align: center;
   margin-top: 5vh;
@@ -409,10 +417,6 @@ nav a {
   }
   .third-box {
     width: 80vw;
-  }
-  .toolbar {
-    background-color: #000000;
-    width: 100vw;
   }
 }
 footer {

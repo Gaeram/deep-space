@@ -1,6 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block main %}
+    {% include 'preheader.html.twig' %}
     {% for article in articles %}
         <article class="list">
             <img class="list-img" src="{{asset('uploads/images/'~ article.image)}}" alt="{{ article.title }}">

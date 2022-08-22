@@ -26,12 +26,14 @@
                 <span class="line l2"></span>
                 <span class="line l3"></span>
             </button>
-            <form method="get" action="{{ path('articles-search') }}">
-                <input type="text" name="search">
-                <input type="submit">
-            </form>
         </header>
         <main>
+            <section class="toolbar">
+                    <form method="get" action="{{ path('articles-search') }}">
+                        <input class="searchbar" type="text" name="search">
+                        <input class="button-box" type="submit">
+                    </form>
+            </section>
             {% block main %}
 
             {% endblock %}
