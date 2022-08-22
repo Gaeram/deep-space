@@ -25,6 +25,8 @@ h3 {
 }
 
 .toolbar {
+  width: 100vw;
+  height: 7vh;
   background-color: $secondary-color;
   display: flex;
   flex-direction: row;

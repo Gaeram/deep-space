@@ -20,20 +20,23 @@
                 <a href="{{ path('admin-categories') }}">Catégories</a>
                 <a href="{{ path('telescop-page')}}">Téléscope GJR-KING</a>
                 <a href="{{ path('project-page') }}">Projet DS-1</a>
+                <a href="{{ path('app_login') }}">Connexion</a>
+                <a href="{{ path('app_logout') }}">Deconnexion</a>
             </nav>
             <button type="button" aria-label="toggle curtain navigation" class="nav-toggler">
                 <span class="line l1"></span>
                 <span class="line l2"></span>
                 <span class="line l3"></span>
             </button>
+            <section class="toolbar">
+                <form method="get" action="{{ path('articles-search') }}">
+                    <input class="searchbar" type="text" name="search">
+                    <input class="button-box" type="submit">
+                </form>
+            </section>
         </header>
         <main>
-            <section class="toolbar">
-                    <form method="get" action="{{ path('articles-search') }}">
-                        <input class="searchbar" type="text" name="search">
-                        <input class="button-box" type="submit">
-                    </form>
-            </section>
+
             {% block main %}
 
             {% endblock %}
