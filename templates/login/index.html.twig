@@ -8,10 +8,10 @@
 
     <form class="connect" action="{{ path('app_login') }}" method="post">
         <label class="article-text" for="username">Email:</label>
-        <input class="input" type="text" id="username" name="_username" value="{{ last_username }}"/>
+        <input type="text" id="username" name="_username" value="{{ last_username }}"/>
 
         <label class="article-text" for="password">Password:</label>
-        <input class="input" type="password" id="password" name="_password"/>
+        <input  type="password" id="password" name="_password"/>
 
         <button class="button-box" type="submit">login</button>
     </form>
