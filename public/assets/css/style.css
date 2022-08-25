@@ -101,6 +101,10 @@ h3 {
   color: #000000;
 }
 
+.searchbar {
+  margin-bottom: 9vh;
+}
+
 .btn {
   display: inline-block;
   margin: auto;
@@ -438,6 +442,9 @@ nav a {
   }
   .connect {
     width: 60vw;
+  }
+  .searchbar {
+    margin-bottom: 2vh;
   }
 }
 footer {
