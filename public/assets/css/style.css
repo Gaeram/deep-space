@@ -45,6 +45,22 @@ h3 {
   align-items: center;
 }
 
+.connect {
+  height: 40vh;
+  width: 20vw;
+  border: solid 1px #D3D3D3;
+  border-radius: 10px;
+  margin-top: 25vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 8px 8px 12px #646464;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #D3D3D3;
+}
+
 .article-title {
   text-align: center;
   margin-top: 5vh;
@@ -419,6 +435,9 @@ nav a {
   }
   .third-box {
     width: 80vw;
+  }
+  .connect {
+    width: 60vw;
   }
 }
 footer {
