@@ -83,7 +83,4 @@ class PageController extends AbstractController
             'articles' => $articles
         ]);
     }
-
-
-
 }

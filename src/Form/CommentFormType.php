@@ -16,7 +16,6 @@ class CommentFormType extends AbstractType
             ->add('IsPublished')
             ->add('PublishedDate')
             ->add('author')
-            ->add('article')
         ;
     }
 

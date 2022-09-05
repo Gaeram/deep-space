@@ -32,10 +32,6 @@
                 {% if app.user %}
                     <p class="pseudo"> Bonjour {{ app.user.name }}</p>
                 {% endif %}
-                <form class="searchbar" method="get" action="{{ path('articles-search') }}">
-                    <input class="searchbar" type="text" name="search">
-                    <input class="button-box" type="submit">
-                </form>
             </section>
         </header>
         <main>

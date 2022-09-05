@@ -73,8 +73,6 @@ h3 {
   text-align: center;
 }
 
-
-
 .subtitle {
   margin-top: 3vh;
   font-family: "Roboto Regular";
@@ -83,6 +81,9 @@ h3 {
 .description {
   margin-top: 5vh;
   font-family: "Roboto Thin";
+  padding-bottom: 5vh;
+  padding-left: 1.5vh;
+  padding-right: 1.5vh;
 }
 
 .headline {
@@ -93,8 +94,6 @@ h3 {
 }
 
 .searchbar {
-  margin-bottom: 9vh;
-  padding: 7px;
   border-radius: 5px;
 }
 

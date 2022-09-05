@@ -7,13 +7,17 @@
 {% block main %}
 
 {% include ('preheader.html.twig') %}
+    <form class="searchbar" method="get" action="{{ path('articles-search') }}">
+        <input class="searchbar" type="text" name="search">
+        <input class="button-box" type="submit">
+    </form>
     <h2 class="section-title">TOUT NOS ARTICLES</h2>
     <section class="articles">
         {% for article in articles %}
             {% if article.IsPublished %}
                 <article class="list">
                     <img class="list-img" src="{{asset('uploads/images/'~ article.image)}}" alt="{{ article.title }}">
-                    <h2>{{ article.title }}</h2>
+                    <h2 class="box-title">{{ article.title }}</h2>
                     <p class="subtitle"> écrit par {{ article.author }}</p>
                     <p class="subtitle">{{ article.category.title }}</p>
                     <p class="description">{{ article.description }}</p>
