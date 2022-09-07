@@ -156,6 +156,16 @@
   padding: 5px;
 }
 
+.comments {
+  margin-top: 5vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+
 
 
 
@@ -185,7 +195,8 @@
     height: 50vh;
   }
 
-  .list {
+  .list{
+    height: 70vh;
     width: 80vw;
   }
 
@@ -232,6 +243,7 @@
   }
 
   .box-title {
+    font-size: 1rem;
     padding-top: 0;
   }
 

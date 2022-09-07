@@ -420,6 +420,15 @@ nav a {
   padding: 5px;
 }
 
+.comments {
+  margin-top: 5vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
 @media screen and (min-width: 320px) and (max-width: 768px) {
   h1 {
     font-size: 2rem;
@@ -440,6 +449,7 @@ nav a {
     height: 50vh;
   }
   .list {
+    height: 70vh;
     width: 80vw;
   }
   .boxes {
@@ -476,6 +486,7 @@ nav a {
     padding: 5px;
   }
   .box-title {
+    font-size: 1rem;
     padding-top: 0;
   }
 }
