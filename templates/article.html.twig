@@ -15,8 +15,13 @@
     </article>
     <section class="comments">
         <h2 class="comments-title">Commentaires</h2>
+            <article class="comment">
+               {# <h3 class="comment-author">{{ comment.article.author }}</h3>
+                <p class="comment-text">{{ comment.article.content }}</p>#}
+            </article>
     </section>
     {% if app.user %}
         <h2 class="comment-title">Ajoutez votre commentaire</h2>
+        
     {% endif %}
 {% endblock %}
