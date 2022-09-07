@@ -2,38 +2,48 @@
 
 namespace App\Controller;
 
+use App\Entity\User;
+use App\Form\UserType;
+use Doctrine\ORM\EntityManagerInterface;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 use Symfony\Component\Routing\Annotation\Route;
-use App\Entity\User;
-use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
-use Symfony\Config\Security\PasswordHasherConfig;
-use App\Form\UserType;
+
 
 class UserController extends AbstractController
 {
     #[Route ("login/signup", name: "sign-up")]
-    public function index(UserPasswordHasherInterface $passwordHasher, AuthenticationUtils $authenticationUtils)
+    public function index(Request $request, UserPasswordHasherInterface $userPasswordHasher, EntityManagerInterface $entityManager)
     {
-        // ... e.g. get the user data from a registration form
         $user = new User();
-        $plaintextPassword =  "mot de passe";
-        $error = $authenticationUtils->getLastAuthenticationError();
 
-        // last username entered by the user
-        $lastUsername = $authenticationUtils->getLastUsername();
-        // hash the password (based on the security.yaml config for the $user class)
-        $hashedPassword = $passwordHasher->hashPassword(
-            $user,
-            $plaintextPassword
-        );
-        $user->setPassword($hashedPassword);
+        $user->setRoles(['ROLE_USER']);
 
-        return $this->render("login/signup.html.twig",[
-            'last_username' => $lastUsername,
-            'error' => $error
-            ]);
+        $form = $this->createForm(UserType::class, $user);
 
-        // ...
+        $form->handleRequest($request);
+
+
+        if ($form->isSubmitted()&&$form->isValid()){
+
+            $plainPassword=$form->get('password')->getData();
+
+            $hashedPassword = $userPasswordHasher->hashPassword($user, $plainPassword);
+
+            $user->setPassword($hashedPassword);
+
+            $entityManager->persist($user);
+
+            $entityManager->flush();
+
+            $this->addFlash('success','Compte créé');
+
+            return $this->redirectToRoute("home");
+        }
+
+        return $this->render('login/signup.html.twig', [
+            'form' => $form->createView(),
+        ]);
     }
 }

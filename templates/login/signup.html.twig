@@ -1,22 +1,23 @@
 {% extends 'base.html.twig' %}
 
 {% block main %}
-
-
-    <form class="connect" action="{{ path('sign-up') }}" method="post">
+   {# <form class="connect" action="{{ path("sign-up") }}" method="post">
         <label class="article-text" for="username">Email:</label>
-        <input class="connection" type="text" id="username" name="-username" value="{{last_username}}"/>
+        <input class="connection" type="text" id="email" name="email"/>
 
         <label class="article-text" for="username">Pseudo:</label>
-        <input class="connection" type="text" id="username" name="-username" value="{{last_username}}"/>
+        <input class="connection" type="text" id="name" name="name"/>
 
         <label class="article-text" for="password">Password:</label>
-        <input class="connection" type="password" id="password" name="_password"/>
+        <input class="connection" type="password" id="password" name="password"/>
 
         <label class="article-text" for="password">Retapez votre mot de passe :</label>
-        <input class="connection" type="password" id="password" name="_password"/>
+        <input class="connection" type="password" id="password" name="password"/>
 
 
-        <button class="button-box" type="submit">S'inscrire</button>
-    </form>
+        <button class="button-box" type="submit" name="valider">S'inscrire</button>
+    </form>#}
+   <div class="connect">
+      {{ form(form) }}
+   </div>
 {% endblock %}
