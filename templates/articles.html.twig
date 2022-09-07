@@ -7,10 +7,12 @@
 {% block main %}
 
 {% include ('preheader.html.twig') %}
-    <form class="searchbar" method="get" action="{{ path('articles-search') }}">
-        <input class="searchbar" type="text" name="search">
-        <input class="button-box" type="submit">
-    </form>
+    <section class="searchtool">
+        <form class="searchbar" method="get" action="{{ path('articles-search') }}">
+            <input class="searchbar" type="text" name="search">
+            <input class="button-box" type="submit">
+        </form>
+    </section>
     <h2 class="section-title">TOUT NOS ARTICLES</h2>
     <section class="articles">
         {% for article in articles %}

@@ -32,11 +32,11 @@
                 <span class="line l2"></span>
                 <span class="line l3"></span>
             </button>
-            <section class="toolbar">
-                {% if app.user %}
-                    <p class="pseudo"> Bonjour {{ app.user.name }}</p>
-                {% endif %}
-            </section>
+            {% if app.user %}
+                <section class="toolbar">
+                        <p class="pseudo"> Bonjour {{ app.user.name }}</p>
+                </section>
+            {% endif %}
         </header>
         <main>
 
