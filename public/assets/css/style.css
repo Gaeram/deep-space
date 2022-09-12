@@ -429,6 +429,32 @@ nav a {
   align-items: center;
 }
 
+.comment {
+  width: 80vw;
+  background-color: #C2C2C2;
+  margin-top: 5vh;
+  border: solid 1px #C2C2C2;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.comment .comment-author {
+  margin-top: 1vh;
+  font-family: "Roboto Regular";
+  color: #282928;
+}
+.comment .comment-text {
+  margin-top: 1vh;
+  font-family: "Roboto Thin";
+}
+.comment .comment-date {
+  margin-top: 1vh;
+  font-family: "Roboto Bold";
+}
+
 @media screen and (min-width: 320px) and (max-width: 768px) {
   h1 {
     font-size: 2rem;

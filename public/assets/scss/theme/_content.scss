@@ -165,6 +165,36 @@
   align-items: center;
 }
 
+.comment {
+  width: 80vw;
+  background-color: $third-color;
+  margin-top: 5vh;
+  border: solid 1px $third-color;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .comment-author {
+    margin-top: 1vh;
+    font-family: "Roboto Regular";
+    color: $tenth-color;
+  }
+
+  .comment-text {
+    margin-top: 1vh;
+    font-family: "Roboto Thin";
+  }
+
+  .comment-date {
+    margin-top: 1vh;
+    font-family: "Roboto Bold";
+  }
+
+}
+
 
 
 
