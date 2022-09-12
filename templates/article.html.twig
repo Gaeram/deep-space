@@ -15,13 +15,18 @@
     </article>
     <section class="comments">
         <h2 class="comments-title">Commentaires</h2>
+        {% for comment in article.comments %}
+            {% if comment.isPublished%}
             <article class="comment">
-               {# <h3 class="comment-author">{{ comment.article.author }}</h3>
-                <p class="comment-text">{{ comment.article.content }}</p>#}
+               <h3 class="comment-author">{{ comment.author.name }}</h3>
+                <p class="comment-text">{{ comment.content }}</p>
+                <p> {{ comment.publishedDate|date('d/m/Y') }}</p>
             </article>
+            {% endif %}
+        {% endfor %}
     </section>
     {% if app.user %}
         <h2 class="comment-title">Ajoutez votre commentaire</h2>
-        {{ form(comment) }}
+        {% if form %}<div>{{ form(form) }}</div>{% endif %}
     {% endif %}
 {% endblock %}

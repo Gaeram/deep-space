@@ -20,17 +20,17 @@ class CommentController extends AbstractController
         #[Route("/comment", name: "comment")]
         public function Comment($id,UserRepository $userRepository,EntityManagerInterface $entityManager,Request $request, CommentRepository $commentRepository, ArticleRepository $articleRepository) {
 
-            $article = $articleRepository->find($id);
+            $article = $articleRepository->findBy($id);
 
             $user = $userRepository->findBy($id);
+
+            $comments = $commentRepository->findAll();
 
             $comment = new Comment();
 
             $comment->setIsPublished(1);
 
             $comment->setAuthor($user);
-
-            $comment->setUser($this->getUser());
 
             $comment->setArticle($article);
 
@@ -41,7 +41,7 @@ class CommentController extends AbstractController
             $form->handleRequest($request);
 
 
-            if ($form->isSubmitted()){
+            if ($form->isSubmitted()&& $form->isValid()){
                 $entityManager->persist($comment);
                 $entityManager->flush();
 
@@ -50,7 +50,8 @@ class CommentController extends AbstractController
 
             return $this->render("article.html.twig",[
                 "comment"=>$comment,
-                "form"=>$form
+                "comments"=>$comments,
+                "form"=>$form->createView()
             ]);
 
         }

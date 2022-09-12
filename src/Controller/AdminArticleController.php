@@ -3,8 +3,12 @@
 namespace App\Controller;
 
 use App\Entity\Article;
+use App\Entity\Comment;
 use App\Form\ArticleType;
+use App\Form\CommentFormType;
 use App\Repository\ArticleRepository;
+use App\Repository\CommentRepository;
+use App\Repository\UserRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -125,6 +129,7 @@ class AdminArticleController extends AbstractController
 
         return $this->redirectToRoute('admin-articles');
     }
+
 
 
 }

@@ -2,8 +2,11 @@
 
 namespace App\Controller;
 
+use App\Entity\Comment;
+use App\Form\CommentFormType;
 use App\Repository\ArticleRepository;
 use App\Service\CallApiService;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
@@ -56,12 +59,33 @@ class PageController extends AbstractController
     }
 
     #[Route("/article/{id}", name: "article-page")]
-    public function articlePage(ArticleRepository $articleRepository, $id){
+    public function articlePage(ArticleRepository $articleRepository, $id, Request $request, EntityManagerInterface $entityManager){
 
         $article = $articleRepository->find($id);
 
+        $comment = new Comment();
+        $form = $this->createForm(CommentFormType::class, $comment);
+
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()){
+            $comment->setIsPublished(1);
+
+            $comment->setAuthor($this->getUser());
+
+            $comment->setArticle($article);
+
+            $comment->setPublishedDate(new \DateTime('NOW'));
+
+            $entityManager->persist($comment);
+            $entityManager->flush();
+
+            return $this->redirectToRoute("article-page", [ 'id' => $article->getId()]);
+        }
+
         return $this->render("article.html.twig", [
-            "article" => $article
+            "article" => $article,
+            'form' => $form->createView()
         ]);
     }
 
