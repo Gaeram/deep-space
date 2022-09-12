@@ -26,9 +26,11 @@
         {% endfor %}
     </section>
     {% if app.user %}
-        <h2 class="comment-title">Ajoutez votre commentaire</h2>
-        {% if form %}
-            <div>{{ form(form) }}</div>
-        {% endif %}
+        <section class="comment-block">
+            <h2 class="comment-title">Ajoutez votre commentaire</h2>
+                {% if form %}
+                    <div class="comment-form">{{ form(form) }}</div>
+                {% endif %}
+        </section>
     {% endif %}
 {% endblock %}
